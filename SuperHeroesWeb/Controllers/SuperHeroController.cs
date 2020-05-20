@@ -4,49 +4,61 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using SuperHeroesWeb.Data;
 using SuperHeroesWeb.Models;
 
 namespace SuperHeroesWeb.Controllers
 {
-    
+
     public class SuperHeroController : Controller
-        
+
     {
-        public readonly ApplicationDbContext _Context;
+        private readonly ApplicationDbContext db;
 
         public SuperHeroController(ApplicationDbContext context)
         {
-            _Context = context;
+            db = context;
         }
         // GET: SuperHero
         public ActionResult Index()
         {
-            return View();
+            return View("Details");
         }
 
         // GET: SuperHero/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var superHeroInDB = db.SuperHeroes.Where(s => s.Id == id).FirstOrDefault();
+            SuperHero mySuperHeroInDB = null;
+            foreach (SuperHero s in db.SuperHeroes)
+            {
+                if (s.Id == id)
+                {
+                    return View(mySuperHeroInDB);
+                }
+            }
+            return View(mySuperHeroInDB);
         }
 
         // GET: SuperHero/Create
         public ActionResult Create()
         {
-            return View();
+            SuperHero newSuperHero = new SuperHero();
+            return View(newSuperHero);
         }
 
         // POST: SuperHero/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(SuperHero newSuperHero)
         {
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction(nameof(Index));
+                db.SuperHeroes.Add(newSuperHero);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+                
             }
             catch
             {
@@ -57,7 +69,16 @@ namespace SuperHeroesWeb.Controllers
         // GET: SuperHero/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var superHeroInDB = db.SuperHeroes.Where(s => s.Id == id).FirstOrDefault();
+            SuperHero mySuperHeroInDB = null;
+            foreach (SuperHero s in db.SuperHeroes)
+            {
+                if (s.Id == id)
+                {
+                    return View(mySuperHeroInDB);
+                }
+            }
+            return View(mySuperHeroInDB);
         }
 
         // POST: SuperHero/Edit/5

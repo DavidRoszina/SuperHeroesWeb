@@ -154,3 +154,8 @@ C:\Users\david\Desktop\devCodeCamp\Websites\SuperHeroesWeb\SuperHeroesWeb\SuperH
 C:\Users\david\Desktop\devCodeCamp\Websites\SuperHeroesWeb\SuperHeroesWeb\SuperHeroesWeb\obj\Debug\netcoreapp3.1\SuperHeroesWeb.dll
 C:\Users\david\Desktop\devCodeCamp\Websites\SuperHeroesWeb\SuperHeroesWeb\SuperHeroesWeb\obj\Debug\netcoreapp3.1\SuperHeroesWeb.pdb
 C:\Users\david\Desktop\devCodeCamp\Websites\SuperHeroesWeb\SuperHeroesWeb\SuperHeroesWeb\obj\Debug\netcoreapp3.1\SuperHeroesWeb.genruntimeconfig.cache
+C:\Users\david\Desktop\devCodeCamp\Websites\SuperHeroesWeb\SuperHeroesWeb\SuperHeroesWeb\obj\Debug\netcoreapp3.1\Razor\Views\SuperHero\Create.cshtml.g.cs
+C:\Users\david\Desktop\devCodeCamp\Websites\SuperHeroesWeb\SuperHeroesWeb\SuperHeroesWeb\obj\Debug\netcoreapp3.1\Razor\Views\SuperHero\Delete.cshtml.g.cs
+C:\Users\david\Desktop\devCodeCamp\Websites\SuperHeroesWeb\SuperHeroesWeb\SuperHeroesWeb\obj\Debug\netcoreapp3.1\Razor\Views\SuperHero\Edit.cshtml.g.cs
+C:\Users\david\Desktop\devCodeCamp\Websites\SuperHeroesWeb\SuperHeroesWeb\SuperHeroesWeb\obj\Debug\netcoreapp3.1\Razor\Views\SuperHero\List.cshtml.g.cs
+C:\Users\david\Desktop\devCodeCamp\Websites\SuperHeroesWeb\SuperHeroesWeb\SuperHeroesWeb\obj\Debug\netcoreapp3.1\Razor\Views\SuperHero\Details.cshtml.g.cs
